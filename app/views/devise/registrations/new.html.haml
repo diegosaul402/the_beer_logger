@@ -3,7 +3,7 @@
     =image_tag('Beer-icon.png', class: 'beer-logo')
     %h3 Sign up
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = devise_error_messages!
+    - devise_error_messages!
     .input-field
       = f.label :email
       %br/

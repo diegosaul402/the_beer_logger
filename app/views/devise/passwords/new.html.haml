@@ -3,7 +3,7 @@
     =image_tag('Beer-icon.png', class: 'beer-logo')
     %h3 Forgot your password?
     = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-      = devise_error_messages!
+      - devise_error_messages!
       .input-field
         = f.label :email
         %br/
