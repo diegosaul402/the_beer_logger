@@ -8,7 +8,7 @@
       .input-field
         = f.label :email
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.email_field :email, autofocus: true, autocomplete: 'email'
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
           Currently waiting confirmation for: #{resource.unconfirmed_email}
@@ -16,7 +16,7 @@
         = f.label :new_password
         -#%i (leave blank if you don't want to change it)
         %br/
-        = f.password_field :password, autocomplete: "off", placeholder: 'leave blank if you don\'t want to change it'
+        = f.password_field :password, autocomplete: 'off', placeholder: 'leave blank if you don\'t want to change it'
         - if @minimum_password_length
           %br/
           %em
@@ -25,14 +25,14 @@
       .input-field
         = f.label :password_confirmation
         %br/
-        = f.password_field :password_confirmation, autocomplete: "off"
+        = f.password_field :password_confirmation, autocomplete: 'off'
       .input-field
         = f.label :current_password
         %br/
-        = f.password_field :current_password, autocomplete: "off", placeholder: 'Enter password to confirm changes'
+        = f.password_field :current_password, autocomplete: 'off', placeholder: 'Enter password to confirm changes'
       .actions
-        = f.submit "Update", class: 'btn blue waves-effect waves-light submit-button'
+        = f.submit 'Update', class: 'btn blue waves-effect waves-light submit-button'
     %h4 Cancel my account
     %p
-      Unhappy? #{button_to "Cancel my account", registration_path(resource_name), class: 'btn red waves-effect waves-light submit-button', data: { confirm: "Are you sure?" }, method: :delete}
-    = link_to "Back", :back
+      Unhappy? #{button_to 'Cancel my account', registration_path(resource_name), class: 'btn red waves-effect waves-light submit-button', data: { confirm: "Are you sure?" }, method: :delete}
+    = link_to 'Back', :back

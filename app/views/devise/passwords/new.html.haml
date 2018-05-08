@@ -7,8 +7,8 @@
       .input-field
         = f.label :email
         %br/
-        = f.email_field :email, autofocus: true, autocomplete: "email"
+        = f.email_field :email, autofocus: true, autocomplete: 'email'
       .actions
-        = f.submit "Reset password", class: 'btn blue waves-effect waves-light submit-button'
+        = f.submit 'Reset password', class: 'btn blue waves-effect waves-light submit-button'
       .shared-links
-        = render "devise/shared/links"
+        = render 'devise/shared/links'
