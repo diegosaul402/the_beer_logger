@@ -14,7 +14,7 @@
         .card-medium.red.message-box
           %p.alert.alert-danger= alert
       - if notice
-        .card-panel.teal.message-box
+        .card-medium.teal.message-box
           %p.alert.alert-success= notice
       = yield
     %p.navbar-text.pull-right
@@ -22,10 +22,10 @@
         Logged in as
         = succeed "." do
           %strong= current_user.email
-        = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link'
+        = link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link'
         |
-        \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'}
+        = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link'
       - else
-        = link_to "Sign up", new_user_registration_path, :class => 'navbar-link'
+        = link_to 'Sign up', new_user_registration_path, class: 'navbar-link'
         |
-        \#{link_to "Login", new_user_session_path, :class => 'navbar-link'}
+        = link_to 'Login', new_user_session_path, class: 'navbar-link'
