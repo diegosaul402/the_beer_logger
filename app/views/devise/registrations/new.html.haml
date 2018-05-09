@@ -1,0 +1,22 @@
+.card-panel.auth-card
+  .beer-logo-container
+    =image_tag('Beer-icon.png', class: 'beer-logo')
+    %h3 Sign up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    - devise_error_messages!
+    .input-field
+      = f.label :email
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: 'email'
+    .input-field
+      = f.label :password
+      %br/
+      = f.password_field :password, autocomplete: 'off'
+    .input-field
+      = f.label :password_confirmation
+      %br/
+      = f.password_field :password_confirmation, autocomplete: 'off'
+    .actions
+      = f.submit 'Sign up', class: 'btn blue waves-effect waves-light submit-button'
+    .shared-links
+      = render 'devise/shared/links'

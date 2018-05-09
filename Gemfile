@@ -32,8 +32,8 @@ gem "administrate"
 gem 'redis', '~> 3.0'
 gem 'redis-rails'
 gem 'redis-namespace'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'materialize-sass', '~> 1.0.0.beta'
+gem 'haml-rails', '~> 1.0'
 
 # Use devise for authentication
 gem 'devise'

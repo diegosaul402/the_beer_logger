@@ -1,0 +1,25 @@
+.auth-card {
+  margin: 0 auto;
+  width: 100%;
+
+  @media only screen and (min-width: 769px) {
+    width: 368px;
+  }
+}
+
+.message-box {
+  color: white;
+  line-height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+  @media only screen and (min-width: 769px) {
+    width: 368px;
+  }
+}
+
+.shared-links {
+  margin-top: 15px;
+  text-align: center;
+}
